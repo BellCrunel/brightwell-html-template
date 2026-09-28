@@ -1,0 +1,4 @@
+.template-preview-bar{position:relative;z-index:2000;background:#111;color:#ddd;font:13px/1.4 Arial,sans-serif;text-align:center;padding:8px 12px}
+.template-preview-bar strong{color:#fff}
+.template-preview-bar a{color:#111;background:#e0a72e;padding:4px 12px;border-radius:3px;margin-left:10px;text-decoration:none;font-weight:bold}
+.template-preview-bar a:hover{background:#f0bc4a}

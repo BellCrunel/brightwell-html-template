@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment - Brightwell Dental</title>
+  <meta name="description" content="Book a dental appointment online at Brightwell Dental: choose an office, a service, a date and a time.">
+  <meta name="author" content="Artefact">
+  <meta name="theme-color" content="#164e63">
+  <meta property="og:title" content="Book an Appointment - Brightwell Dental">
+  <meta property="og:description" content="Book a dental appointment online at Brightwell Dental: choose an office, a service, a date and a time.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-image_pexels-photo-3845744.jpg">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/vendors/aos/aos.css">
+  <link rel="stylesheet" href="assets/vendors/swiper/swiper-bundle.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/preview-bar.css">
+</head>
+<body>
+  <div class="template-preview-bar">You are previewing <strong>Brightwell – Dental Clinic HTML Template</strong> <a href="https://www.codester.com/RelictTheme/" target="_blank" rel="noopener">Buy Now</a></div>
+
+
+  <!-- ====== Emergency Bar ====== -->
+  <div class="emergency-bar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <p class="mb-0"><i class="bi bi-exclamation-circle"></i> Dental emergency? Same-day visits for pain, swelling and broken teeth. <a href="tel:+13031234599">Call (303) 123-4599</a></p>
+      <span class="open-status d-none d-md-inline-flex" data-hours="1-4 08:00-18:00; 5 08:00-15:00; 6 09:00-14:00">Mon - Thu 8AM - 6PM</span>
+    </div>
+  </div>
+
+  <!-- ====== Header ====== -->
+  <header class="site-header sticky-top" id="header">
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.svg" alt="Brightwell Dental" width="178" height="36">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-3 mb-xl-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><a class="dropdown-item" href="service-single.html">Dental Implants</a></li>
+                <li><a class="dropdown-item" href="services.html#cosmetic">Whitening &amp; Veneers</a></li>
+                <li><a class="dropdown-item" href="services.html#orthodontics">Clear Aligners</a></li>
+                <li><a class="dropdown-item" href="services.html#kids">Kids Dentistry</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="smile-gallery.html">Smile Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="new-patients.html">New Patients</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="header-actions">
+            <a href="tel:+13031234580" class="header-phone"><i class="bi bi-telephone"></i> (303) 123-4580</a>
+            <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+
+  <!-- ====== Page Header ====== -->
+  <section class="page-header">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Book Appointment</li>
+        </ol>
+      </nav>
+      <h1>Book an Appointment</h1>
+      <p>Choose an office and a time. We confirm by text within one business hour.</p>
+    </div>
+  </section>
+
+  <!-- ====== Booking Section ====== -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-8">
+          <form class="demo-form booking-form" novalidate>
+            <div class="booking-step">
+              <h2><span>1</span> Office and Service</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <span class="form-label d-block">Office</span>
+                  <div class="office-options">
+                    <input type="radio" class="btn-check" name="office" id="officeDowntown" value="downtown" checked>
+                    <label class="office-option" for="officeDowntown"><strong>Downtown</strong><small>Mon - Fri</small></label>
+                    <input type="radio" class="btn-check" name="office" id="officeHighlands" value="highlands">
+                    <label class="office-option" for="officeHighlands"><strong>Highlands</strong><small>Mon - Sat</small></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="service" class="form-label">Service</label>
+                  <select class="form-select" id="service" name="service" required>
+                    <option value="">Choose a service</option>
+                    <option>Checkup and cleaning</option>
+                    <option>New patient visit</option>
+                    <option>Toothache or emergency</option>
+                    <option>Teeth whitening</option>
+                    <option>Implant consultation</option>
+                    <option>Clear aligner consultation</option>
+                    <option>Kids checkup</option>
+                  </select>
+                  <label for="dentist" class="form-label mt-3">Dentist</label>
+                  <select class="form-select" id="dentist" name="dentist">
+                    <option>No preference</option>
+                    <option>Dr. Rachel Moore</option>
+                    <option>Dr. Brian Kowalski</option>
+                    <option>Dr. Megan Foley</option>
+                    <option>Dr. Chris Martinez</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-step">
+              <h2><span>2</span> Date and Time</h2>
+              <div class="row g-3">
+                <div class="col-md-5">
+                  <label for="date" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="col-md-7">
+                  <span class="form-label d-block">Free times</span>
+                  <div class="time-slots" id="timeSlots"></div>
+                  <input type="hidden" id="time" name="time">
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-step">
+              <h2><span>3</span> Your Details</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Mobile Phone</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" autocomplete="tel" required>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" autocomplete="email">
+                </div>
+                <div class="col-12">
+                  <label for="notes" class="form-label">Anything we should know?</label>
+                  <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newPatient" name="new_patient">
+                    <label class="form-check-label" for="newPatient">I am a new patient</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Request Appointment</button>
+            <div class="form-message alert alert-success d-none mt-3" role="alert">Thanks! Your request is in. We will text you to confirm the time.</div>
+          </form>
+        </div>
+
+        <div class="col-lg-4">
+          <aside class="sidebar">
+            <div class="widget widget-dark">
+              <h3>Dental Emergency?</h3>
+              <p>Don't wait for an online slot. Call and we will see you today.</p>
+              <a href="tel:+13031234599" class="footer-phone"><i class="bi bi-telephone"></i> (303) 123-4599</a>
+            </div>
+            <div class="widget">
+              <h3>Opening Hours</h3>
+              <ul class="list-unstyled hours-list">
+                <li><span>Mon - Thu</span> 8:00 AM - 6:00 PM</li>
+                <li><span>Friday</span> 8:00 AM - 3:00 PM</li>
+                <li><span>Saturday</span> 9:00 AM - 2:00 PM</li>
+                <li><span>Sunday</span> Closed</li>
+              </ul>
+              <p class="small mb-0">Saturday visits at Highlands only.</p>
+            </div>
+            <div class="widget">
+              <h3>First Time Here?</h3>
+              <p>Fill in the new patient form before you come.</p>
+              <a href="new-patients.html#intake" class="link-arrow">New patient form <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ====== Footer ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-5">
+          <a href="index.html" class="footer-logo"><img src="assets/img/logo-white.svg" alt="Brightwell Dental" width="178" height="36" loading="lazy"></a>
+          <p class="footer-about">Family and cosmetic dentistry in Denver. Two offices, early mornings and Saturday hours.</p>
+          <div class="footer-contact">
+            <a href="tel:+13031234580"><i class="bi bi-telephone"></i> (303) 123-4580</a>
+            <a href="mailto:hello@brightwell.dental"><i class="bi bi-envelope"></i> hello@brightwell.dental</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h2 class="footer-title">Quick Links</h2>
+          <ul class="list-unstyled footer-menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="smile-gallery.html">Smile Gallery</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="pricing.html#insurance">Insurance</a></li>
+            <li><a href="new-patients.html">New Patients</a></li>
+            <li><a href="appointment.html">Book Online</a></li>
+            <li><a href="contact.html">Locations</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h2 class="footer-title">Opening Hours</h2>
+          <table class="footer-hours">
+            <tbody>
+            <tr><th>Mon - Thu</th><td>8:00 AM - 6:00 PM</td></tr>
+            <tr><th>Friday</th><td>8:00 AM - 3:00 PM</td></tr>
+            <tr><th>Saturday</th><td>9:00 AM - 2:00 PM *</td></tr>
+            <tr><th>Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p class="footer-note">* Highlands office only</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        &copy; 2026 Brightwell Dental &middot; Demo names, prices and contact details are fictional and can be replaced.
+        <span>Crafted by <a href="https://www.codester.com/RelictTheme/" target="_blank" rel="noopener">Artefact</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="scroll-top" id="scrollTop" title="Scroll to top"><i class="bi bi-chevron-up"></i></button>
+
+
+  <!-- Vendor JS -->
+  <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendors/aos/aos.js"></script>
+  <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
