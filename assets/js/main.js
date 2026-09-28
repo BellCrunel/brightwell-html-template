@@ -65,9 +65,9 @@
     return h + (m ? ":" + (m < 10 ? "0" : "") + m : "") + " " + suffix;
   };
 
-  document.querySelectorAll(".open-status[data-hours]").forEach(function (el) {
+  var parseHours = function (str) {
     var hours = {};
-    el.getAttribute("data-hours").split(";").forEach(function (rule) {
+    str.split(";").forEach(function (rule) {
       var parts = rule.trim().split(" ");
       var range = parts[0].split("-");
       var time = parts[1].split("-");
@@ -75,6 +75,11 @@
         hours[d] = [toTime(time[0]), toTime(time[1])];
       }
     });
+    return hours;
+  };
+
+  document.querySelectorAll(".open-status[data-hours]").forEach(function (el) {
+    var hours = parseHours(el.getAttribute("data-hours"));
 
     var now = new Date();
     var today = hours[now.getDay()];
@@ -149,32 +154,35 @@
         slotBox.innerHTML = '<p class="slot-note">Choose a date to see free times.</p>';
         return;
       }
+      var office = document.querySelector('input[name="office"]:checked');
       var date = new Date(dateInput.value + "T00:00:00");
-      var day = date.getDay();
-      var end = day === 5 ? 15 : day === 6 ? 14 : 18;
-      var start = day === 6 ? 9 : 8;
-      if (day === 0) {
-        slotBox.innerHTML = '<p class="slot-note">We are closed on Sundays. For an emergency call (303) 123-4599.</p>';
+      var open = parseHours(office.getAttribute("data-hours"))[date.getDay()];
+      if (!open) {
+        slotBox.innerHTML = '<p class="slot-note">This office is closed on that day. Pick another day or office, or call (303) 123-4599 for an emergency.</p>';
         return;
       }
-      for (var h = start; h < end; h++) {
-        [0, 30].forEach(function (m) {
-          var btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "time-slot";
-          btn.textContent = label(h * 60 + m);
-          // fake busy slots for the demo
-          if ((date.getDate() * 7 + h * 3 + m) % 5 === 0) btn.disabled = true;
-          btn.addEventListener("click", function () {
-            slotBox.querySelectorAll(".time-slot").forEach(function (s) { s.classList.remove("active"); });
-            btn.classList.add("active");
-            timeInput.value = btn.textContent;
-          });
-          slotBox.appendChild(btn);
+      for (var t = open[0]; t < open[1]; t += 30) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "time-slot";
+        btn.textContent = label(t);
+        // fake busy slots for the demo
+        if ((date.getDate() * 7 + t / 10) % 5 === 0) btn.disabled = true;
+        btn.addEventListener("click", function () {
+          slotBox.querySelectorAll(".time-slot").forEach(function (s) { s.classList.remove("active"); });
+          this.classList.add("active");
+          timeInput.value = this.textContent;
+          slotBox.classList.remove("slot-error");
+          slotMessage.classList.add("d-none");
         });
+        slotBox.appendChild(btn);
       }
     };
+    var slotMessage = document.getElementById("slotMessage");
     dateInput.addEventListener("change", renderSlots);
+    document.querySelectorAll('input[name="office"]').forEach(function (r) {
+      r.addEventListener("change", renderSlots);
+    });
     renderSlots();
   }
 
@@ -188,6 +196,7 @@
       }
       if (timeInput && form.contains(timeInput) && !timeInput.value) {
         slotBox.classList.add("slot-error");
+        document.getElementById("slotMessage").classList.remove("d-none");
         return;
       }
       var msg = form.querySelector(".form-message");

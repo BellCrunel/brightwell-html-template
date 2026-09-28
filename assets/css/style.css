@@ -1358,6 +1358,13 @@ a.service-item:hover {
   border-color: #ef4444;
 }
 
+.slot-message {
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px 0 0;
+}
+
 /* ====== Contact ====== */
 .office-card {
   background: #fff;

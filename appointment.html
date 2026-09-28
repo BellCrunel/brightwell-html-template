@@ -103,9 +103,9 @@
                 <div class="col-md-6">
                   <span class="form-label d-block">Office</span>
                   <div class="office-options">
-                    <input type="radio" class="btn-check" name="office" id="officeDowntown" value="downtown" checked>
+                    <input type="radio" class="btn-check" name="office" id="officeDowntown" value="downtown" data-hours="1-4 08:00-18:00; 5 08:00-15:00" checked>
                     <label class="office-option" for="officeDowntown"><strong>Downtown</strong><small>Mon - Fri</small></label>
-                    <input type="radio" class="btn-check" name="office" id="officeHighlands" value="highlands">
+                    <input type="radio" class="btn-check" name="office" id="officeHighlands" value="highlands" data-hours="1-4 08:00-18:00; 5 08:00-15:00; 6 09:00-14:00">
                     <label class="office-option" for="officeHighlands"><strong>Highlands</strong><small>Mon - Sat</small></label>
                   </div>
                 </div>
@@ -144,6 +144,7 @@
                   <span class="form-label d-block">Free times</span>
                   <div class="time-slots" id="timeSlots"></div>
                   <input type="hidden" id="time" name="time">
+                  <p class="slot-message d-none" id="slotMessage" role="alert">Please pick a time.</p>
                 </div>
               </div>
             </div>
