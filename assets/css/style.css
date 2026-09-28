@@ -82,6 +82,11 @@ img {
   height: auto;
 }
 
+.no-js [data-aos] {
+  opacity: 1;
+  transform: none;
+}
+
 .section {
   padding: 96px 0;
 }
