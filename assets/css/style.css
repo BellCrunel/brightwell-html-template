@@ -368,6 +368,11 @@ main p a:not(.btn),
   font-size: 14px;
 }
 
+.banner-card i {
+  color: var(--accent);
+  font-size: 22px;
+}
+
 .banner-card strong {
   color: var(--primary-dark);
   font-size: 16px;
@@ -833,7 +838,7 @@ main p a:not(.btn),
   height: 44px;
   border: 0;
   border-radius: 12px;
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
   font-size: 18px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
@@ -851,7 +856,7 @@ main p a:not(.btn),
 }
 
 .scroll-top:hover {
-  background: var(--accent);
+  background: var(--accent-dark);
 }
 
 /* ====== Page Header ====== */
@@ -1259,6 +1264,10 @@ a.service-item:hover {
   box-shadow: 0 0 0 3px rgba(22, 78, 99, .15);
 }
 
+.form-check-input {
+  border-color: #a8a29e;
+}
+
 .form-check-input:checked {
   background-color: var(--primary);
   border-color: var(--primary);
@@ -1457,6 +1466,10 @@ a.service-item:hover {
 
   .sidebar {
     position: static;
+  }
+
+  .footer-contact {
+    margin-bottom: 16px;
   }
 
   .page-header h1 {

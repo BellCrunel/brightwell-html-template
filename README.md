@@ -30,7 +30,7 @@ Demo images are not included. The download has grey placeholders with the size w
 
 ## Credits
 
-Bootstrap, Bootstrap Icons, AOS, Swiper (MIT). Plus Jakarta Sans (SIL OFL). Details in `LICENSE.md`.
+Bootstrap, Bootstrap Icons, AOS, Swiper (MIT). Plus Jakarta Sans (SIL OFL). Demo photo credits: `assets/img/CREDITS.md`.
 
 ## Support
 
