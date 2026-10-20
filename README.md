@@ -22,7 +22,7 @@ index.html, about.html, services.html, service-single.html, smile-gallery.html, 
 
 ## Live demo
 
-This repository hosts the live demo. The template package (with documentation) is available on Codester: https://www.codester.com/RelictTheme/
+This repository hosts the live demo. The template package (with documentation) is available on Codester: https://www.codester.com/items/72660/brightwell-dental-clinic-html-template
 
 ## Images
 
